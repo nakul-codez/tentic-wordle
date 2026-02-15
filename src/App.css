@@ -1,0 +1,290 @@
+.heading {
+  font-size: clamp(2.5rem, 4.5vmax, 3.5rem);
+  margin: 0.5em 5%;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  container-type: inline-size;
+  width: min(25rem, 80vw);
+  height: 90vh;
+  margin: 5vh 10vw;
+  z-index: 1;
+  text-align: center;
+  background-color: black;
+  border-radius: 2.5rem;
+  border: 0.35rem solid white;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.rules-popup-heading {
+  font-size: max(1.8rem, 12cqw);
+  margin: 0.5em 5cqw 0;
+}
+
+.rules-popup-subheading {
+  font-size: max(1.2rem, 8cqw);
+  font-weight: 500;
+  margin: 0.5em 5cqw 0;
+}
+
+.rule-list {
+  font-size: max(0.9rem, 4.5cqw);
+  margin: 1em 10cqw;
+  text-align: left;
+}
+
+.example-heading {
+  font-size: max(1.1rem, 6.5cqw);
+}
+
+.example {
+  font-size: max(0.9rem, 4.5cqw);
+  margin: 0.5em 10cqw;
+}
+
+.example-display {
+  display: flex;
+  justify-content: center;
+  gap: max(0.4rem, 2.5cqw);
+}
+
+.example-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: max(1.2rem, 7cqw);
+  height: max(1.5rem, 10cqw);
+  width: max(1.5rem, 10cqw);
+  background-color: grey;
+}
+
+.rules-end {
+  margin-bottom: 2.5em;
+}
+
+.rules-popup-btn {
+  font-size: max(1.2rem, 8cqw);
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  width: 50cqw;
+  padding: 0.3em 0;
+  margin: auto 25cqw 1em;
+  border: 0.2rem solid white;
+  border-radius: 1.5rem;
+}
+
+.rules-popup-btn:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+  row-gap: 0.6vmax;
+  column-gap: 0.4vmax;
+  margin-bottom: 1.5vmax;
+} 
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vmax, 2rem);
+  height: clamp(2.5rem, 5vmax, 3.5rem);
+  width: clamp(2.5rem, 5vmax, 3.5rem);
+  border: 0.15rem solid white;
+  background-color: black;
+}
+
+@keyframes enlarge {
+  50% {transform: scale(1.2);}
+}
+
+.typing {
+  animation: enlarge 0.8s ease-in-out;
+}
+
+@keyframes flip {
+  0% {transform: scaleY(1);}
+  50% {transform: scaleY(0);}
+  100% {transform: scaleY(1); background-color: var(--bgcolor); border: 2px solid var(--bgcolor);}
+}
+
+.submit {
+  animation: flip 0.8s ease-in-out forwards;
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  20%, 60% {transform: translateX(5px);}
+  40%, 80% {transform: translateX(-5px);}
+}
+
+.invalid {
+  animation: shake 0.5s ease-in-out;
+}
+
+.keyboard-layout {
+  width: 90vw;
+  margin: max(2.5rem, 5vw) 5vw;
+  font-size: clamp(0.8rem, 2vmax, 1.5rem);
+}
+
+.row1, .row2, .row3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row2 {
+  width: 90%;
+  margin: auto 5%;
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(2rem, 5vmax, 3.5rem);
+  width: clamp(1.6rem, 4vmax, 2.8rem);
+  background-color: #333;
+  border-radius: 0.4rem;
+  margin: 0.25em;
+  font-weight: 700;
+}
+
+#key3_0 {
+  width: clamp(2.4rem, 6vmax, 4.2rem);
+  font-size: 0.6em;
+  margin: 0.417em;
+}
+
+#key3_8 {
+  width: clamp(2.4rem, 6vmax, 4.2rem);
+}
+
+.key:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  font-weight: 500;
+  font-size: clamp(1rem, 1.8vmax, 1.4rem);
+  margin: auto 5% 0.5em;
+}
+
+.rules-icon {
+  position: fixed;
+  top: 3vmax;
+  right: 3vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(2rem, 4vmax, 2.8rem);
+  width: clamp(2rem, 4vmax, 2.8rem);
+  font-size: clamp(1.2rem, 2.4vmax, 1.6rem);
+  background-color: black;
+  color: white;
+  border: 0.15rem solid white;
+}
+
+.keyboard-icon {
+  position: fixed;
+  bottom: 3vmax;
+  right: 3vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(2rem, 4vmax, 2.8rem);
+  width: clamp(2rem, 4vmax, 2.8rem);
+  font-size: clamp(1.2rem, 2.4vmax, 1.6rem);
+  background-color: black;
+  color: white;
+  border: 0.15rem solid white;
+}
+
+.rules-icon:hover, .keyboard-icon:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.timer {
+  position: fixed;
+  bottom: 3vmax;
+  left: 3vmax;
+  color: white;
+  font-size: clamp(1.5rem, 2.7vmax, 2.1rem);
+  font-weight: 600;
+}
+
+.final-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  container-type: inline-size;
+  width: min(30rem, 80vw);
+  height: 40vh;
+  margin: 30vh 10vw;
+  padding: 1.5vmax 0;
+  z-index: 2;
+  text-align: center;
+  background-color: black;
+  border-radius: 2.5rem;
+  border: 0.35rem solid white;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.final-popup-heading {
+  font-size: max(1.8rem, 9cqw); 
+  margin: 0 5cqw;
+}
+
+.final-popup-subheading {
+  font-size: max(1.2rem, 4cqw);
+  font-weight: 500;
+  margin: 0.75em 1em;
+}
+
+.final-popup-btn {
+  font-size: max(1.2rem, 4cqw);
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  width: 50cqw;
+  padding: 0.5em 0;
+  margin: auto 25cqw 0;
+  border: 0.2rem solid white;
+  border-radius: 1.5rem;
+}
+
+.final-popup-btn:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.rules::-webkit-scrollbar, .final-popup::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
