@@ -39,7 +39,7 @@ Tentic Wordle: https://nakul-codez.github.io/tentic-wordle/
 Want to run a local copy? Just follow these steps:
 1. Clone the repository
 
-        git clone https://github.com/your-username/tentic-wordle.git
+        git clone https://github.com/nakul-codez/tentic-wordle.git
 3. Enter the project folder
 
         cd tentic-wordle
